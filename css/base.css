@@ -14,8 +14,21 @@ i{
 }
 
 body {
-  font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  background-color: #E4E6E9;
+}
+
+html[lang="zh-CN"] body {
+  font: 14px/1.5 /*system-ui,*/ -apple-system, "PingFangSC-Regular", "Microsoft Yahei", "Noto Sans", "WenQuanYi Micro Hei", "Heiti SC", sans-serif;
   color: #333;
+}
+
+html[lang="en"] body {
+  font: 14px/1.5 /*system-ui,*/ -apple-system, Tahoma, Arial, sans-serif;
+  color: #333;
+}
+
+p:lang(en), span:lang(en),a:lang(en) {
+  font: 14px/1.5 /*system-ui,*/ -apple-system, Tahoma, Arial, sans-serif;
 }
 
 a {
