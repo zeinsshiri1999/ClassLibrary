@@ -1,30 +1,256 @@
 .wrapper {/*版心box样式类*/
-    width: 62.5%;
-    margin: 0 auto;
+  width: 62.5%;
+  margin: 0 auto;
 }
 
 /* header */
 .header {
-    height: 100px;
-    background-color: #f5f5f5;
+  height: 100px;
+  background-color: #f5f5f5;
 }
 
-.header .wrapper {
-    display: flex;  
-    height: 100%;
-    padding-top: 29px;
-    background:green;
+.header .wrapper {/*这里改的是.header的版心，不加会影响共有版心*/
+  display: flex;  
+  height: 100%;
+  padding-top: 29px;
+  /* background:green; */
 }
 
 .header .logo {
-    width: 195px;
-    height: 77%;
-    background:red;
+  width: 195px;
+  height: 41px;
+  /* background:red;     */
 }
 
-.header .ul {
-    width: 100%;
-    height: 100%;
-    background:blue;
+.header .logo a {
+  display: block;/*设置大小前要设置为块*/
+  width: 195px;
+  height: 41px;
+  background-image: url(../images/logo.png);
+  font-size: 0;/*不显示用于seo的文字*/
+}
+
+.header .nav {
+  margin-left: 100px;
+  padding-top: 5px;
+  /* background:rgb(32, 32, 142); */
+}
+
+.header .nav ul {
+  display: flex;
+  /* background-color: pink; */
+}
+
+.header .nav li {
+  margin-right: 20px;
+}
+
+.header .nav li a {
+  font-size: 19px;
+  border-color: skyblue;
+}
+
+.header .nav li a:hover {
+  border-bottom-style: solid;
+}
+
+.header .search {
+  margin-left: 230px;
+  width: 300px;
+  height: 40px;
+  border-radius: 25px;
+  background:ghostwhite;
+}
+
+.header .search input {
+  width: 300px;
+  height: 40px;
+  background:transparent;
+  border-width: 0;
+  outline: none;/*点击不显示外边框*/
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+.header .user {
+  margin-left: 190px;
+  padding-top: 3px;
+  /* background:red; */
+}
+
+.header .user img {
+  vertical-align: middle;/*产生中间基线*/
+}
+
+.header .cart {
+  margin-left: 20px;
+  padding-top: 6px;
+  /* background:yellow; */
 }
 /* header end*/
+
+/* banner start*/
+.banner {
+  height: 420px;
+  background-color: #3C90C4;
+}
+
+.banner .wrapper{
+  display: flex;
+  height: 420px;
+  justify-content: space-between;/*主轴两侧对齐*/
+  align-items: center;/*侧轴居中对齐*/
+  background: url(../uploads/banner.png);
+  background-position: center center;
+}
+
+.banner .left {
+  width: 191px;
+  height: 420px;
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.42);
+}
+
+.banner .left li {
+  height: 46px;
+}
+
+.banner .left li a {
+  position: relative;
+
+  display: block;  
+  width: 100%;
+  height: 100%;/*设置a高度*/
+  font-size: 17px;
+  line-height: 46px;
+  color: #fff;
+  padding: 0 25px;
+  border-bottom: 1px solid #fff;
+}
+
+.banner .left i{/*装饰性小图标都用个box装着，这个box可以说span；但通常用约定icon的缩写<i>盒子*/
+  position: absolute;
+  top: -1px;
+  right: 25px;
+}
+
+.banner .left li a:hover {
+  color: skyblue;
+  background-color: rgba(0, 0, 0, 0.3);/*透明度是0.3+0.42*/
+} 
+
+.banner .right {
+  width: 218px;
+	height: 305px;
+  padding-top: 18px;
+  background-color: #2A99CB;
+  border-radius: 15px;
+}
+
+.banner .right h3 {
+  height: 20px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+  padding-left: 14px;
+}
+
+.banner .content {
+  width: 218px;
+  height: 257px;
+  margin-top: 9px;
+  padding:14px;
+  background-color: #fff;
+  border-radius: 10px;  
+}
+
+.banner .content dl {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 14px;
+}
+
+.banner .content dt {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.banner .content dd {
+  font-size: 12px;
+  color: #7d7d7d;
+  margin: 8px 0; 
+}
+
+.banner dd span {
+  color: #00a4ff;
+}
+
+.banner .content a {
+  display: block;
+  width: 190px;
+  height: 32px;
+  background-color: #00a4ff;
+  border-radius: 20px;
+
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* banner end*/
+
+/* recommend_nav start*/
+.recommend_nav {
+  display: flex;
+  height: 60px;
+  padding: 18px 20px;
+}
+
+.recommend_nav h3{
+  width: 72px;
+	height: 25px;
+
+  font-size: 18px;
+  line-height: 25px;
+  color: #00a4ff;
+}
+
+.recommend_nav ul{
+  display: flex;
+  flex: 1;/*填充中间剩余空间*/
+  width: 49px;
+	height: 25px;
+  margin-left: 20px;
+
+  font-size: 18px;
+  /* background-color: #00a4ff; */
+}
+
+.recommend_nav li{
+  padding-right: 24px;
+  border-right: 1px solid #ccc;
+  margin-left: 24px;
+}
+
+.recommend_nav li a:hover{
+  color: #00a4ff;
+}
+
+.recommend_nav li:last-child{/*最后一个li*/
+  border-right: 0;
+}
+
+.recommend_nav > a{
+  width: 64px;
+	height: 23px;
+  margin-left: 93px;
+
+  line-height: 23px;
+  font-size: 16px;
+  color: #00a4ff;
+}
+
+
+/*recommend_nav end*/
+
+
