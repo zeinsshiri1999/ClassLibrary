@@ -5,8 +5,15 @@
 
 /* header */
 .header {
+  z-index: 1;/*position layout层最高层级*/
+  /* position: fixed; */
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
   height: 100px;
   background-color: #f5f5f5;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .header .wrapper {/*这里改的是.header的版心，不加会影响共有版心*/
@@ -55,21 +62,34 @@
 }
 
 .header .search {
+  position: relative;
   margin-left: 230px;
-  width: 300px;
+  /* width: 150px; */
   height: 40px;
   border-radius: 25px;
-  background:ghostwhite;
+  background:rgb(223, 223, 225);
+}
+
+
+.header .icon-fangdajing{
+  position: absolute;
+  top: 0px;
+  right: 10px;
+
+  font-size: 26px;
+  color: #00a4ff;
 }
 
 .header .search input {
-  width: 300px;
-  height: 40px;
+  width: 150px;
+  height: 100%;
   background:transparent;
   border-width: 0;
   outline: none;/*点击不显示外边框*/
   padding-left: 20px;
   padding-right: 30px;
+
+  transition: all .32s;
 }
 
 .header .user {
@@ -87,12 +107,19 @@
   padding-top: 6px;
   /* background:yellow; */
 }
+
+
+.header .search input:focus {
+  width: 300px;
+}
+
 /* header end*/
 
 /* banner start*/
 .banner {
   height: 420px;
   background-color: #3C90C4;
+  /* margin-top: 100px; */
 }
 
 .banner .wrapper{
@@ -126,6 +153,8 @@
   color: #fff;
   padding: 0 25px;
   border-bottom: 1px solid #fff;
+
+  transition: all .3s;
 }
 
 .banner .left i{/*装饰性小图标都用个box装着，这个box可以说span；但通常用约定icon的缩写<i>盒子*/
@@ -137,6 +166,8 @@
 .banner .left li a:hover {
   color: skyblue;
   background-color: rgba(0, 0, 0, 0.3);/*透明度是0.3+0.42*/
+
+  padding-left: 35px;
 } 
 
 .banner .right {
@@ -299,7 +330,7 @@
   margin-bottom: 14px;
   border-radius: 15px;
   
-  transition: .3s; /* 效果，动画过渡时间 */
+  transition: all .3s; /* 效果，动画过渡时间 */
 }
 
 .bd li img{
@@ -328,6 +359,7 @@
 
 .bd li:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+  margin-top: -5px;
 }
 
 /*bd end*/
